@@ -18,3 +18,13 @@ pivot = pd.pivot_table(
 
 print(pivot)
 print(df[['score', 'hours_studied']].corr())
+
+pivot2= pd.pivot_table(
+    df,
+    values='score',
+    index='student',
+    columns='subject',
+    aggfunc='mean'
+)
+print(pivot2)
+print(pivot2.corr())
